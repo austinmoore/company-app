@@ -82,7 +82,7 @@ feature 'Employees' do
   end
 
   scenario 'delete an existing employee', js: true,
-    pending: 'fails with WebDriverError on my machine. Wrote request spec instead' do
+    skip: 'fails with WebDriverError on my machine. Wrote request spec instead' do
     employee = FactoryBot.create(:employee)
     visit company_employees_path(employee.company)
 
