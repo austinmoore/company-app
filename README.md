@@ -34,8 +34,31 @@ Getting Started
 Documentation and Support
 -------------------------
 
+rails new company-app --skip-action-cable --skip-turbolinks --skip-coffee --skip-spring -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+rails g scaffold company name:text --no-routing-specs --no-helper-specs --no-view-specs
+
+Changes I would make to a production app:
+* Use rubocop
+* Localize everything
+
+
 Issues
 -------------
+
+* (DONE) CRUD for companies: name
+* CRUD for employees: first_name, last_name
+** employee belongs to company
+* Generate identity tokens
+** Token must be unique but only within a class scope (i.e. employee and company
+   could possibly have the same token if the format would be the same)
+** Token is randomly generated from capital letters of English alphabet of 
+   configured length with a configured delimiter for a configured attribute
+** companies.identity ABCD:EFGH -> two-block token with ‘:’ used as delimiter
+** employees.identifier ABCD-EFGH-IJKL -> three-block token with ‘-’ used as delimiter
+* README
+* tests
+** unit
+** system
 
 Similar Projects
 ----------------
