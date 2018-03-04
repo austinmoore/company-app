@@ -35,7 +35,8 @@ Documentation and Support
 -------------------------
 
 rails new company-app --skip-action-cable --skip-turbolinks --skip-coffee --skip-spring -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
-rails g scaffold company name:text --no-routing-specs --no-helper-specs --no-view-specs
+rails g scaffold company name:string --no-routing-specs --no-helper-specs --no-view-specs
+bin/rails g nested_scaffold company/employee first_name:string last_name:string --no-routing-specs --no-helper-specs --no-view-specs
 
 Changes I would make to a production app:
 * Use rubocop

@@ -26,6 +26,7 @@ gem 'pg', '~> 0.18'
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
+  gem 'nested_scaffold'
 end
 group :development, :test do
   gem 'factory_bot_rails'
