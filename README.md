@@ -3,7 +3,8 @@ Company App
 
 Simple implementation of a programming challenge in which companies have many
 employees. Both companies and employees have a similar but slightly different
-unique token.
+unique token. Try it out on 
+[Heroku](https://fathomless-woodland-91602.herokuapp.com).
 
 Requirements
 -------------
