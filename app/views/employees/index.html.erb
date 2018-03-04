@@ -15,7 +15,7 @@
     <td><%= employee.last_name %></td>
     <td><%= link_to 'Show', [employee.company, employee] %></td>
     <td><%= link_to 'Edit', edit_company_employee_path(employee.company, employee) %></td>
-    <td><%= link_to 'Destroy', [employee.company, employee], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', [employee.company, employee], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

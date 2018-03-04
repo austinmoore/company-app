@@ -46,16 +46,18 @@ Changes I would make to a production app:
 * Abstract use of ActiveRecord by using form/service objects
 * Use uuids instead of integers for ids
 * Use foreman for starting server (and other processes)
-* Always soft-delete instead of hard-delete on destroy action 
+* Always soft-delete instead of hard-delete on destroy action
+* Pagination of results on index pages
+* Add request specs if the backend implements an API 
 
 Issues
 -------------
 
 * (DONE) CRUD for companies: name
-** Add validations and non-null to migrations
+** (DONE) Add validations and non-null to migrations
 * (DONE) CRUD for employees: first_name, last_name, company
 ** Link from company -> employees and employee -> company
-** Add validations and non-null to migrations
+** (DONE) Add validations and non-null to migrations
 * Generate identity tokens
 ** Token must be unique but only within a class scope (i.e. employee and company
    could possibly have the same token if the format would be the same)
@@ -66,7 +68,7 @@ Issues
 * README
 * tests
 ** unit
-** system
+** (DONE) system
 
 Similar Projects
 ----------------
