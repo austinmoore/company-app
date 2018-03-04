@@ -49,6 +49,7 @@ Changes I would make to a production app:
 * Always soft-delete instead of hard-delete on destroy action
 * Pagination of results on index pages
 * Add request specs if the backend implements an API 
+* Use namespaces for all modules/classes
 
 Issues
 -------------
@@ -61,13 +62,13 @@ Issues
 * Generate identity tokens
 ** Token must be unique but only within a class scope (i.e. employee and company
    could possibly have the same token if the format would be the same)
-** Token is randomly generated from capital letters of English alphabet of 
+** (DONE) Token is randomly generated from capital letters of English alphabet of 
    configured length with a configured delimiter for a configured attribute
 ** companies.identity ABCD:EFGH -> two-block token with ‘:’ used as delimiter
 ** employees.identifier ABCD-EFGH-IJKL -> three-block token with ‘-’ used as delimiter
 * README
 * tests
-** unit
+** (DONE) unit
 ** (DONE) system
 
 Similar Projects
