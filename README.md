@@ -35,13 +35,18 @@ Documentation and Support
 -------------------------
 
 rails new company-app --skip-action-cable --skip-turbolinks --skip-coffee --skip-spring -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
-rails g scaffold company name:string --no-routing-specs --no-helper-specs --no-view-specs
+bin/rails g scaffold company name:string --no-routing-specs --no-helper-specs --no-view-specs
 bin/rails g nested_scaffold company/employee first_name:string last_name:string --no-routing-specs --no-helper-specs --no-view-specs
 
 Changes I would make to a production app:
 * Use rubocop
 * Localize everything
-
+* Consider using client side rendering (e.g. https://reactjs.org/) + server
+  side API instead of server side rendering
+* Abstract use of ActiveRecord by using form/service objects
+* Use uuids instead of integers for ids
+* Use foreman for starting server (and other processes)
+* Always soft-delete instead of hard-delete on destroy action 
 
 Issues
 -------------

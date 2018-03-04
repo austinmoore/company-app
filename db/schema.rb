@@ -16,15 +16,16 @@ ActiveRecord::Schema.define(version: 20180304092816) do
   enable_extension "plpgsql"
 
   create_table "companies", force: :cascade do |t|
-    t.text "name"
+    t.text "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_companies_on_name", unique: true
   end
 
   create_table "employees", force: :cascade do |t|
     t.bigint "company_id", null: false
-    t.text "first_name"
-    t.text "last_name"
+    t.text "first_name", null: false
+    t.text "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_employees_on_company_id"

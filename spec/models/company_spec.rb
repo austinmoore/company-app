@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Company, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it {is_expected.to validate_presence_of(:name)}
+  it {is_expected.to have_db_index(:name).unique(true)}
+  it {is_expected.to have_many(:employees)}
+
+  context 'with an existing company' do
+    subject {FactoryBot.create(:company)}
+    it {is_expected.to validate_uniqueness_of(:name)}
+  end
 end

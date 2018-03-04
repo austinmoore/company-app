@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :company do
-    name "MyText"
+    sequence(:name) { |i| "Company Name #{i}" }
   end
 end
