@@ -77,6 +77,8 @@ feature 'Companies' do
   # with more unit tests on the model level and request specs to cover the
   # controllers which run faster. I think having some system tests though can
   # be handy especially if the server is generating the html.
+  # Normally, I wouldn't leave a failing spec like this in a project. They tend
+  # to pile up and never be fixed if not fixed immediately.
   scenario 'delete an existing company with employees', js: true,
     skip: 'fails with WebDriverError on my machine. Wrote request spec instead' do
     _company = FactoryBot.create(:company, :with_employees,
