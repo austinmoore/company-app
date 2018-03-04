@@ -60,6 +60,17 @@ feature 'Companies' do
     expect(page).to have_content 'Company was successfully updated.'
   end
 
+  scenario 'links to the employees and back' do
+    company = FactoryBot.create(:company)
+    visit company_path(company)
+
+    click_link 'List employees'
+    expect(current_path).to eq(company_employees_path(company))
+
+    click_link 'Back'
+    expect(current_path).to eq(company_path(company))
+  end
+
   scenario 'delete an existing company with employees', js: true,
     pending: 'fails with WebDriverError on my machine. Wrote request spec instead' do
     _company = FactoryBot.create(:company, :with_employees,

@@ -56,7 +56,7 @@ Issues
 * (DONE) CRUD for companies: name
 ** (DONE) Add validations and non-null to migrations
 * (DONE) CRUD for employees: first_name, last_name, company
-** Link from company -> employees and employee -> company
+** (DONE) Link from company -> employees and employee -> company
 ** (DONE) Add validations and non-null to migrations
 * Generate identity tokens
 ** Token must be unique but only within a class scope (i.e. employee and company
