@@ -1,5 +1,10 @@
 # Random token generator
 class GenerateToken
+
+  # This is a very simple "service object". When writing service objects, I try
+  # to follow the guidelines outlined here:
+  # https://multithreaded.stitchfix.com/blog/2015/06/02/anatomy-of-service-objects-in-rails/
+
   BLOCK_LENGTH = 4
   private_constant :BLOCK_LENGTH
   VALID_CHARS = ('A'..'Z').to_a.freeze
